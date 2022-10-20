@@ -8,17 +8,17 @@ def run():
     underscore = num_underscore(word)
     list_characters = list_word(word)
 
-    print(word)
-    print(len(word))
-    print(list_characters)
-    print(' '.join(map(str, underscore)))
-
+    show(underscore)
     while hay_underscore(word, underscore):
         user_char = input('Ingrese una letra: ')
         coincidencia(user_char,word,underscore)
-        print(' '.join(map(str, underscore)))
+        show(underscore)
     
     print('ganaste')
+
+def show(underscore):
+    print('\n  '+' '.join(map(str, underscore)) + '\n')
+
         
 
 def coincidencia(user_char,word,underscore):
